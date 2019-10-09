@@ -68,7 +68,9 @@ ALTER TABLE materia DROP COLUMN Teste;
 
 INSERT INTO aluno (Nome, Ra, Idade) VALUES ('Alef','R123',23);
 
-INSERT INTO aluno (Nome, Ra, Idade) VALUES ('Bruna','R133',22);
+INSERT INTO aluno (Nome, Ra, Idade) VALUES
+('Alef','R123',23), 
+('Bruna','R133',22);
 
 /* INSERIR DADO NA TABELA MATÉRIA */
 
