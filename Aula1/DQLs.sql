@@ -33,7 +33,7 @@ SELECT * FROM trabalho
 /* JUNTAMOS AS TRÊS TABELAS COM INNER JOIN */
 -- Deixamos somente os dados que nos interesam no momento
 SELECT
-	-- nome da tabela . nome do atributo
+	-- nome da tabela . nome do atributo desta tabela
 	aluno.Nome,
 	aluno.Ra,
 	aluno.Idade,
