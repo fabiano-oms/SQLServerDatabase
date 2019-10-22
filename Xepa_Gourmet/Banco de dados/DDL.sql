@@ -1,7 +1,7 @@
-Create database XepaDigital;
-use XepaDigital;
+CREATE DATABASE XepaDigital;
+USE XepaDigital;
 
-Create table Endereco(
+CREATE TABLE Endereco(
     IdEndereco int identity primary key,
     Endereco varchar (255),
     Numero varchar (10),
@@ -10,7 +10,7 @@ Create table Endereco(
     Bairro varchar (255),
     Estado char (2)
 );
-Create table Usuario(
+CREATE TABLE Usuario(
     IdUsuario int identity primary key,
     NomeUsuario varchar (255) not null,
     EmailUsuario varchar (255) unique not null,
@@ -21,7 +21,7 @@ Create table Usuario(
     Telefone2 varchar (15),
     IdEndereco int foreign key references Endereco(IdEndereco)
 );
-Create table Colaborador(
+CREATE TABLE Colaborador(
     IdColaborador int identity primary key,
     ImgPerfil varchar (255),
     RazaoSocial varchar (50),
@@ -30,7 +30,7 @@ Create table Colaborador(
     SobreColab Text,
     IdUsuario int foreign key references Usuario(IdUsuario)
 );
-Create table SobreProduto(
+CREATE TABLE SobreProduto(
     IdSobreProduto int identity primary key,
     DescricaoProduto varchar (255) not null,
     Disponibilidade decimal not null,
@@ -38,18 +38,18 @@ Create table SobreProduto(
     Preco varchar (20) not null,
     Validade varchar (20) not null
 );
-Create table Produto(
+CREATE TABLE Produto(
     IdProduto int identity primary key,
     NomeProduto varchar (255) not null,
     ImgProduto varchar (255) not null,
     IdSobreProduto int foreign key references SobreProduto(IdSobreProduto)
 );
-Create table RegistroProduto(
+CREATE TABLE RegistroProduto(
     IdRegistro int identity primary key,
     IdProduto int foreign key references Produto(IdProduto),
     IdColaborador int foreign key references Colaborador(IdColaborador)
 );
-Create table Receita(
+CREATE TABLE Receita(
     IdReceita int identity primary key,
     NomeReceita varchar (255) not null,
     ImgReceita varchar (255) not null,
@@ -57,7 +57,7 @@ Create table Receita(
     DescricaoPreparo text not null,
     IdUsuario int foreign key references Usuario(IdUsuario)
 );
-Create table ReservaProduto(
+CREATE TABLE ReservaProduto(
     IdReserva int identity primary key,
     Quantidade decimal not null,
     IdProduto int foreign key references Produto(IdProduto),
