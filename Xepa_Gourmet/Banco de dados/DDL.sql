@@ -19,6 +19,7 @@ Create table Usuario(
     TipoUsuario varchar (20),
     Telefone1 varchar (15),
     Telefone2 varchar (15),
+    IdEndereco int foreign key references Endereco(IdEndereco)
 );
 Create table Colaborador(
     IdColaborador int identity primary key,
