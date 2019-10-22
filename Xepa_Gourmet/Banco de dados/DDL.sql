@@ -26,16 +26,16 @@ Create table Colaborador(
     RazaoSocial varchar (50),
     DocumentoColab varchar (20),
     FazEntrega bit DEFAULT (0),
-    Sobrecolab Text,
+    SobreColab Text,
     IdUsuario int foreign key references Usuario(IdUsuario)
 );
 Create table SobreProduto(
-    IdSobreProduto int identity primary key not null,
-    SobreProduto varchar (255),
-    Disponibilidade decimal,
-    Organico bit DEFAULT (0),
-    Preco varchar (20),
-    Validade varchar (20)
+    IdSobreProduto int identity primary key,
+    DescricaoProduto varchar (255) not null,
+    Disponibilidade decimal not null,
+    Organico bit DEFAULT (0) not null,
+    Preco varchar (20) not null,
+    Validade varchar (20) not null
 );
 Create table Produto(
     IdProduto int identity primary key,
@@ -53,12 +53,12 @@ Create table Receita(
     NomeReceita varchar (255) not null,
     ImgReceita varchar (255) not null,
     DescricaoIngrediente text not null,
-    DescricaoModoPreparo text not null,
+    DescricaoPreparo text not null,
     IdUsuario int foreign key references Usuario(IdUsuario)
 );
 Create table ReservaProduto(
     IdReserva int identity primary key,
-    Quantidade decimal,
+    Quantidade decimal not null,
     IdProduto int foreign key references Produto(IdProduto),
     IdUsuario int foreign key references Usuario(IdUsuario)
 );

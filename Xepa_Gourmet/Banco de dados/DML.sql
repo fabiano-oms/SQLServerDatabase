@@ -10,7 +10,11 @@ INSERT INTO Receita (Nome_Receita, IMG_Receita, Descricao_Ingrediente, Descricao
 INSERT INTO Colaborador (IMG_Perfil, Razao_Social, Documento, Faz_Entrega, Sobre, Id_Usuario) VALUES
 ('','','',1,'',1);
 
-INSERT INTO Sobre_Produto
+INSERT INTO SobreProduto (DescricaoProduto, Disponibilidade, Organico, Preco, Validade) VALUES
+('A cenoura é uma raiz de cor alaranjada. Este legume é riquíssimo em betacaroteno, um elemento importante para a visão.','12 Kg');
 
-INSERT INTO Produto (NomeProduto, )
-();
+INSERT INTO Produto (NomeProduto, ImgProduto, IdSobreProduto) VALUES
+('Cenoura','url/123/cenoura.jpg',1),
+('Beterraba','url/143/beterraba.jpg',2),
+('Batata','url/143/batata.jpg',3),
+('Pepino','url/143/pepino.jpg',4);
