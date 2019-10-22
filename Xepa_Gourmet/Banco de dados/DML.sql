@@ -10,5 +10,7 @@ INSERT INTO Receita (Nome_Receita, IMG_Receita, Descricao_Ingrediente, Descricao
 INSERT INTO Colaborador (IMG_Perfil, Razao_Social, Documento, Faz_Entrega, Sobre, Id_Usuario) VALUES
 ('','','',1,'',1);
 
-INSERT INTO Produto ()
+INSERT INTO Sobre_Produto
 
+INSERT INTO Produto (NomeProduto, )
+();
