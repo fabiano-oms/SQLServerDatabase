@@ -5,7 +5,7 @@ INSERT INTO Endereco (Endereco, Numero, CEP, Cidade, Bairro, Estado) VALUES
 ('R.Gen.Júlio Marcondes Salgado','100','54367-007','São Paulo','São Bento Novo','SP');
 
 INSERT INTO Usuario (NomeUsuario, EmailUsuario, SenhaUsuario, ReceberNotif, Telefone1, Telefone2, TipoUsuario, IdEndereco) VALUES
-('Administrador','adm@admxepadigital.com','admpass591',1,'(00) 0000-0000','00 0000-0000','Administrador',1,
+('Administrador','adm@admxepadigital.com','admpass591',1,'(00) 0000-0000','00 0000-0000','Administrador',1),
 ('Ayana','Ayanadasilva@gmail.com','Ayana543',1,'','','Colaborador',2),
 ('Joselito','Joselito.mendes@hotmail.com','21051998',1,'','','Colaborador',3),
 ('Fernando','fernando.lol@gmail.com','lol123',0,'(00) 0000-0000','','Cliente',4);
